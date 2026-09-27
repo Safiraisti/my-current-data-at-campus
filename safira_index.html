@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Pribadi - Safira Isti Radisya Putri Kusmainda</title>
+
+    <style>
+
+        /* ================================
+           STYLE DASAR
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+
+        /* ================================
+           HEADER
+        ================================= */
+
+        header {
+            background: linear-gradient(
+                135deg,
+                #1e3a8a,
+                #2563eb,
+                #38bdf8
+            );
+
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+
+        /* FOTO PROFIL */
+
+       .foto-profil {
+    width: 150px;
+    height: 150px;
+
+    display: block;
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 5px solid white;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+
+        header p {
+            font-size: 17px;
+            margin: 5px 0;
+        }
+
+
+        /* ================================
+           NAVIGASI
+        ================================= */
+
+        nav {
+            background-color: white;
+
+            padding: 16px;
+
+            text-align: center;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.08);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+        }
+
+
+        nav a {
+            color: #1d4ed8;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            margin: 0 15px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #0f172a;
+        }
+
+
+        /* ================================
+           MAIN
+        ================================= */
+
+        main {
+            max-width: 1050px;
+
+            margin: 40px auto;
+
+            padding: 0 20px;
+        }
+
+
+        /* ================================
+           SECTION
+        ================================= */
+
+        section {
+            background-color: white;
+
+            margin-bottom: 25px;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 18px rgba(15, 23, 42, 0.08);
+        }
+
+
+        section h2 {
+            color: #1d4ed8;
+
+            margin-bottom: 18px;
+
+            padding-left: 12px;
+
+            border-left: 5px solid #38bdf8;
+        }
+
+
+        section p {
+            text-align: justify;
+        }
+
+
+        /* ================================
+           PROFIL SINGKAT
+        ================================= */
+
+        .profil-singkat {
+            margin-top: 20px;
+
+            padding: 18px;
+
+            background-color: #eff6ff;
+
+            border-left: 5px solid #2563eb;
+
+            border-radius: 8px;
+        }
+
+
+        .profil-singkat strong {
+            color: #1d4ed8;
+
+            font-size: 18px;
+        }
+
+
+        /* ================================
+           TABEL PENDIDIKAN
+        ================================= */
+
+        table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 15px;
+        }
+
+
+        table th {
+            background-color: #85583e;
+
+            color: rgb(255, 255, 255);
+
+            padding: 14px;
+
+            text-align: left;
+        }
+
+
+        table td {
+            padding: 14px;
+
+            border-bottom:
+                1px solid #dbe3ec;
+        }
+
+
+        table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+
+        table tr:hover {
+            background-color: #eff6ff;
+        }
+
+
+        /* ================================
+           KEAHLIAN
+        ================================= */
+
+        .daftar-keahlian {
+            list-style: none;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+
+            margin-top: 15px;
+        }
+
+
+        .daftar-keahlian li {
+            background-color: #eff6ff;
+
+            border:
+                1px solid #bfdbfe;
+
+            color: #1e40af;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        .daftar-keahlian li:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 5px 12px rgba(37, 99, 235, 0.15);
+        }
+
+
+        /* ================================
+           PENGALAMAN ORGANISASI
+        ================================= */
+
+        .pengalaman {
+            padding-left: 25px;
+        }
+
+
+        .pengalaman li {
+            margin-bottom: 13px;
+        }
+
+
+        /* ================================
+           TUJUAN KARIER
+        ================================= */
+
+        .tujuan-karier {
+            background-color: #f8fafc;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            border-left: 5px solid #2563eb;
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        footer {
+            background-color: #0f172a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            margin-top: 40px;
+        }
+
+
+        footer p {
+            margin: 6px 0;
+        }
+
+
+        footer a {
+            color: #7dd3fc;
+
+            text-decoration: none;
+        }
+
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================================
+           RESPONSIVE / HP
+        ================================= */
+
+        @media (max-width: 650px) {
+
+            header {
+                padding: 45px 15px;
+            }
+
+
+            header h1 {
+                font-size: 28px;
+            }
+
+
+            header p {
+                font-size: 15px;
+            }
+
+
+            .foto-profil {
+                width: 125px;
+                height: 125px;
+            }
+
+
+            nav a {
+                display: inline-block;
+
+                margin: 5px 8px;
+            }
+
+
+            section {
+                padding: 22px;
+            }
+
+
+            .daftar-keahlian {
+                grid-template-columns: 1fr;
+            }
+
+
+            table {
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER / IDENTITAS
+    ========================================== -->
+
+    <header id="beranda">
+
+        <!-- FOTO PROFIL -->
+        <img
+            src="./fotoprofil.jpg"
+            alt="Foto Profil"
+            class="foto-profil"
+>
+
+        <!-- NAMA -->
+        <h1>
+            Safira Isti Radisya Putri Kusmainda
+        </h1>
+
+
+        <!-- IDENTITAS -->
+        <p>
+            Mahasiswi Sistem Informasi
+        </p>
+
+
+        <p>
+            Fakultas Komputer
+        </p>
+
+
+        <p>
+            Anggota Himpunan Mahasiswa Sistem Informasi (HMSISFO)
+        </p>
+
+    </header>
+
+
+
+    <!-- =========================================
+         NAVIGASI
+    ========================================== -->
+
+    <nav>
+
+        <a href="#tentang">
+            Tentang Saya
+        </a>
+
+
+        <a href="#pendidikan">
+            Pendidikan
+        </a>
+
+
+        <a href="#keahlian">
+            Keahlian
+        </a>
+
+
+        <a href="#organisasi">
+            Organisasi
+        </a>
+
+
+        <a href="#karier">
+            Karier
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             TENTANG SAYA
+        ====================================== -->
+
+        <section id="tentang">
+
+            <h2>
+                Tentang Saya
+            </h2>
+
+
+            <p>
+                Saya adalah seorang mahasiswi Sistem Informasi,
+                Fakultas Komputer, yang memiliki ketertarikan
+                pada bidang teknologi informasi, pengembangan
+                sistem, komunikasi, dan pelayanan kepada pengguna.
+            </p>
+
+
+            <br>
+
+
+            <p>
+                Selain menjalani kegiatan akademik, saya juga aktif
+                sebagai anggota Himpunan Mahasiswa Sistem Informasi
+                (HMSISFO). Melalui kegiatan organisasi, saya dapat
+                mengembangkan kemampuan komunikasi, kerja sama tim,
+                tanggung jawab, serta manajemen waktu.
+            </p>
+
+
+            <div class="profil-singkat">
+
+                <strong>
+                    Profil Singkat
+                </strong>
+
+
+                <p>
+                    Mahasiswi Sistem Informasi yang senang mempelajari
+                    hal baru, mampu bekerja sama dalam tim, dan memiliki
+                    semangat untuk mengembangkan kemampuan baik dalam
+                    bidang akademik maupun organisasi.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RIWAYAT PENDIDIKAN
+        ====================================== -->
+
+        <section id="pendidikan">
+
+            <h2>
+                Riwayat Pendidikan
+            </h2>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Jenjang
+                        </th>
+
+
+                        <th>
+                            Nama Institusi
+                        </th>
+
+
+                        <th>
+                            Tahun
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            SMA
+                        </td>
+
+
+                        <td>
+                            SMAN 8 Semarang
+                        </td>
+
+
+                        <td>
+                            2022 - 2025
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            S1
+                        </td>
+
+
+                        <td>
+                            Universitas Dian Nuswantoro -
+                            Sistem Informasi
+                        </td>
+
+
+                        <td>
+                            2025 - Sekarang
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+
+        <!-- =====================================
+             KEAHLIAN
+        ====================================== -->
+
+        <section id="keahlian">
+
+            <h2>
+                Keahlian
+            </h2>
+
+
+            <ul class="daftar-keahlian">
+
+                <li>
+                    💻 Dasar HTML5
+                </li>
+
+
+                <li>
+                    📊 Analisis Sistem Informasi
+                </li>
+
+
+                <li>
+                    📝 Microsoft Word dan PowerPoint
+                </li>
+
+
+                <li>
+                    💬 Komunikasi yang Baik
+                </li>
+
+
+                <li>
+                    🤝 Kerja Sama Tim
+                </li>
+
+
+                <li>
+                    ⏰ Manajemen Waktu
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PENGALAMAN ORGANISASI
+        ====================================== -->
+
+        <section id="organisasi">
+
+            <h2>
+                Pengalaman Organisasi
+            </h2>
+
+
+            <ol class="pengalaman">
+
+                <li>
+
+                    <strong>
+                        Himpunan Mahasiswa Sistem Informasi
+                        (HMSISFO)
+                    </strong>
+
+                    — Aktif mengikuti kegiatan organisasi
+                    dan membantu pelaksanaan kegiatan
+                    kemahasiswaan.
+
+                </li>
+
+
+                <li>
+
+                    Berpartisipasi dalam kegiatan kepanitiaan
+                    dan bekerja sama dengan anggota lain dalam
+                    menyelesaikan tugas.
+
+                </li>
+
+
+                <li>
+
+                    Mengembangkan kemampuan komunikasi,
+                    tanggung jawab, koordinasi, dan kerja sama
+                    melalui kegiatan organisasi.
+
+                </li>
+
+            </ol>
+
+        </section>
+
+
+
+        <!-- =====================================
+             TUJUAN KARIER
+        ====================================== -->
+
+        <section id="karier">
+
+            <h2>
+                Tujuan Karier
+            </h2>
+
+
+            <div class="tujuan-karier">
+
+                <p>
+                    Saya ingin terus mengembangkan kemampuan
+                    di bidang Sistem Informasi dan memperoleh
+                    pengalaman profesional. Saya memiliki
+                    ketertarikan pada pekerjaan yang berhubungan
+                    dengan teknologi informasi, komunikasi,
+                    pelayanan pengguna, dan customer service.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <p>
+
+            <strong>
+                Safira Isti Radisya Putri Kusmainda
+            </strong>
+
+        </p>
+
+
+        <p>
+            Mahasiswi Sistem Informasi |
+            Fakultas Komputer
+        </p>
+
+
+        <p>
+            Anggota Himpunan Mahasiswa Sistem Informasi
+            (HMSISFO)
+        </p>
+
+
+        <p>
+            Email:
+            safiraradis@email.com
+        </p>
+
+
+        <p>
+
+            Instagram:
+
+            <a href="#">
+                @safiradis_
+            </a>
+
+
+            &nbsp; | &nbsp;
+
+
+            GitHub:
+
+            <a href="#">
+                github.com/Safiraisti
+            </a>
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+            &copy; 2026 Safira Isti Radisya Putri Kusmainda.
+            Semua hak dilindungi.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
